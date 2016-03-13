@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CondorClient.jnlp">
+  <information>
+    <title>CondorClient</title>
+    <vendor>lianxiang</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CondorClient_1.5.1.jar" size="153115" download="eager" />
+    <jar href="lib/activation.jar" size="60693" download="eager" />
+    <jar href="lib/axis.jar" size="1682791" download="eager" />
+    <jar href="lib/birdbath.jar" size="9852" download="eager" />
+    <jar href="lib/commons-discovery-0.2.jar" size="78111" download="eager" />
+    <jar href="lib/commons-io-2.4.jar" size="198396" download="eager" />
+    <jar href="lib/condor.jar" size="63165" download="eager" />
+    <jar href="lib/dom4j-1.6.1.jar" size="331559" download="eager" />
+    <jar href="lib/javax.wsdl_1.6.2.v201012040545.jar" size="180759" download="eager" />
+    <jar href="lib/jaxen-1.1.1.jar" size="246521" download="eager" />
+    <jar href="lib/jaxrpc.jar" size="38054" download="eager" />
+    <jar href="lib/mail.jar" size="392870" download="eager" />
+    <jar href="lib/org.apache.commons.logging_1.1.1.v201101211721.jar" size="72118" download="eager" />
+    <jar href="lib/saaj.jar" size="22990" download="eager" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="CondorClient" >
+    <param name="requiredFXVersion" value="2.2+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="condorclient.CondorClient"  name="CondorClient" />
+  <update check="always"/>
+</jnlp>

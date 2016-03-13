@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   
+    <url schedd="http://10.1.1.135:9628" collector="http://10.1.1.135:9638" />
+    <exe name="CISE" path="/home/jiadan/"/>
+     <user name="htcondor" />
+       
+       
+    
+       
+  
+</root>

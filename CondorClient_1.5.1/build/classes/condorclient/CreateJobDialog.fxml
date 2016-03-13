@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="condorclient.CreateJobDialogController">
+   <children>
+      <GridPane layoutY="7.0" prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="128.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="472.0" minWidth="10.0" prefWidth="472.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="37.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="任务名">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="信息流文件" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="实验框架文件" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="样本总数" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="分配方法" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="分配CPU数" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="分配节点数" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="指定节点" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <ScrollPane prefHeight="86.0" prefWidth="402.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+              <content>
+                <AnchorPane fx:id="availMachines" minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <VBox fx:id="machineBox" spacing="3.0" />
+                     </children></AnchorPane>
+              </content>
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </ScrollPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="290.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="134.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="infoFileText" />
+                  <Button mnemonicParsing="false" onAction="#infoFileChooserFired" prefWidth="40.0" text="..." GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="290.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="182.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="expFileText" />
+                  <Button mnemonicParsing="false" onAction="#expFileChooserFired" prefWidth="40.0" text="..." GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="290.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="sampleNumText" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <RadioButton fx:id="byslot" mnemonicParsing="false" onAction="#allocMethod" text="按核数">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="dispatchGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="bynode" mnemonicParsing="false" onAction="#allocMethod" text="按节点" toggleGroup="$dispatchGroup" GridPane.columnIndex="1" />
+                  <RadioButton fx:id="byappoint" mnemonicParsing="false" onAction="#allocMethod" text="指定节点" toggleGroup="$dispatchGroup" GridPane.columnIndex="2" />
+                  <RadioButton fx:id="bycondor" mnemonicParsing="false" onAction="#allocMethod" text="自适应" toggleGroup="$dispatchGroup" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="120.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.0" minWidth="10.0" prefWidth="227.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="cpuNumText" maxWidth="200.0" />
+                  <GridPane prefHeight="42.0" prefWidth="235.0" GridPane.columnIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="79.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="148.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="当前可用数：" />
+                        <TextField fx:id="availCpuNumText" prefHeight="23.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+                  <Label fx:id="snumError" textFill="RED" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="7">
+              <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="230.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="nodeNumText" maxWidth="200.0" prefHeight="23.0" prefWidth="122.0" GridPane.columnIndex="1" />
+                  <GridPane GridPane.columnIndex="3">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="79.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="148.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="当前可用数：" />
+                        <TextField fx:id="availNodeNumText" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+                  <Label fx:id="nnumError" textFill="RED" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="10">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="runJobButton" mnemonicParsing="false" onAction="#runJobFired" prefWidth="65.0" stylesheets="@AlertDialog.css" text="运行任务" />
+                  <Button fx:id="saveJobButton" mnemonicParsing="false" onAction="#saveJobFired" prefWidth="65.0" stylesheets="@AlertDialog.css" text="保存任务" GridPane.columnIndex="1" />
+                  <Button fx:id="cancelCreateButton" mnemonicParsing="false" onAction="#cancelCreateFired" prefWidth="65.0" stylesheets="@AlertDialog.css" text="取消" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <Label text="结果文件目录" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="290.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="resultFileText" />
+                  <Button mnemonicParsing="false" onAction="#resultDirChooserFired" prefWidth="40.0" text="..." GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="290.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="182.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="jobNameText" onMouseExited="#checkExistFired" />
+                  <Label fx:id="jobNameError" textFill="RED" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Label fx:id="otherError" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
